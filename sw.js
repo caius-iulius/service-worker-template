@@ -1,5 +1,4 @@
 var toCache = [
-        '/',
         '/index.html',
         '/assets/css/styles.min.css',
         '/app.js',
