@@ -1,12 +1,12 @@
 var toCache = [
-        '/index.html',
+        '/',
         '/assets/css/styles.min.css',
         '/app.js',
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
 ];
 var cacheName = 'cic-cache-v2';
-var swVersion = 'v0.1.0';
+var swVersion = 'v0.1.1';
 
 self.addEventListener('fetch', function(event) { //cache first
   event.respondWith(caches.match(event.request).then(function(response) {
