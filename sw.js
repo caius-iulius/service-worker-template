@@ -7,7 +7,7 @@ var toCache = [
         '/assets/placeholderpage.html'
 ];
 var cacheName = 'cic-cache-v1';
-var swVersion = 'v0.1.1';
+var swVersion = 'v0.1.0';
 
 self.addEventListener('fetch', function(event) { //cache first
   event.respondWith(caches.match(event.request).then(function(response) {
