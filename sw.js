@@ -7,7 +7,7 @@ var toCache = [
         '/assets/placeholderpage.html'
 ];
 var cacheName = 'cic-cache-v1';
-var swVersion = 'v0.1';
+var swVersion = 'v0.1.0';
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
