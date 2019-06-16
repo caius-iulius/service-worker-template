@@ -9,7 +9,7 @@ self.addEventListener('install', function(event) {
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
       ]);
-    })
+    }.catch(function(err){console.log(err);}))
   );
 });
 
