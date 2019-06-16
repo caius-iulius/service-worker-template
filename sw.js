@@ -6,7 +6,7 @@ var toCache = [
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
 ];
-var cacheName = 'cic-cache-v2';
+var cacheName = 'cic-cache-v3';
 var swVersion = 'v0.1.0';
 
 self.addEventListener('install', function(event) {
