@@ -9,25 +9,9 @@ self.addEventListener('install', function(event) {
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
       ]);
-    }).catch(function(err){console.log("Error at sw-activate: "+err);})
-  );
-});
-
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.open('cic-cache-v1').then(function(cache) {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/assets/css/styles.min.css',
-        '/app.js',
-        '/assets/js/sidenav.js',
-        '/assets/placeholderpage.html'
-      ]);
     }).catch(function(err){console.log("Error at sw-install: "+err);})
   );
 });
-
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request).then(function(response) {
