@@ -5,7 +5,7 @@ var toCache = [
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
 ];
-var cacheName = 'cic-cache-v1';
+var cacheName = 'cic-cache-v2';
 var swVersion = 'v0.1.0';
 
 self.addEventListener('fetch', function(event) { //cache first
