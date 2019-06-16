@@ -7,7 +7,7 @@ var urlsToCache = [
 ];
 
 const basename = "cic-cache-";
-var swVersion = 'v0.1';
+var swVersion = Math.random();
 var CACHE_NAME = basename+swVersion;
 
 self.addEventListener('install', function(event) {
