@@ -13,7 +13,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cacheName).then(function(cache) {
       return cache.addAll(toCache);
-    }).then(function(){console.log("Service Worker "+swVersion+" installed!")}).catch(function(err){console.log("Error at sw-install: "+err);})
+    }).catch(function(err){console.log("Error at sw-install: "+err);})
   );
 });
 
