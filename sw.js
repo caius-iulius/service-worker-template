@@ -1,14 +1,17 @@
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('cic-cache-v1').then(function(cache) {
-      return cache.addAll([
+var toCache = [
         '/',
         '/index.html',
         '/assets/css/styles.min.css',
         '/app.js',
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
-      ]);
+];
+var cacheName = 'cic-cache-v1';
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(toCache);
     }).catch(function(err){console.log("Error at sw-install: "+err);})
   );
 });
@@ -17,7 +20,7 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request).then(function(response) {
       return fetch(event.request).then(function (response) {
         let responseClone = response.clone();
-        caches.open('cic-cache-v1').then(function (cache) {
+        caches.open(cacheName).then(function (cache) {
           cache.put(event.request, responseClone);
         });
         
