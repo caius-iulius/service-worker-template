@@ -1,6 +1,6 @@
 var urlsToCache = [
         '/',
-        '/assets/css/styles.min.css',
+        '/assets/css/stylesV2-light.css',
         '/app.js',
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
