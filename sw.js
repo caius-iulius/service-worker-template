@@ -5,10 +5,18 @@ var toCache = [
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html'
 ];
-var cacheName = 'cic-cache-v2';
-var swVersion = 'v0.1.1';
+var cacheName = 'cic-cache-v1';
+var swVersion = 'v0.1.0';
 
-self.addEventListener('fetch', function(event) { //cache first
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(toCache);
+    }).catch(function(err){console.log("Error at sw-install: "+err);})
+  );
+});
+
+self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request).then(function(response) {
     // caches.match() always resolves
     // but in case of success response will have value
@@ -21,7 +29,7 @@ self.addEventListener('fetch', function(event) { //cache first
         // and serve second one
         let responseClone = response.clone();
         
-        caches.open('cic-cache-v1').then(function (cache) {
+        caches.open(cacheName).then(function (cache) {
           cache.put(event.request, responseClone);
         });
         return response;
