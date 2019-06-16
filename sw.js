@@ -9,14 +9,6 @@ var toCache = [
 var cacheName = 'cic-cache-v1';
 var swVersion = 'v0.1.1';
 
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll(toCache);
-    }).catch(function(err){console.log("Error at sw-install: "+err);})
-  );
-});
-
 self.addEventListener('fetch', function(event) { //network first
   event.respondWith(caches.match(event.request).then(function(response) {
       return fetch(event.request).then(function (response) {
