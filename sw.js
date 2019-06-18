@@ -3,7 +3,9 @@ var urlsToPrefetch = [
         '/assets/css/stylesV2-light.css',
         '/app.js',
         '/assets/js/sidenav.js',
-        '/assets/placeholderpage.html'
+        '/assets/placeholderpage.html',
+        '/favicon.ico',
+        '/manifest.json'
 ];
 
 var CACHE_VERSION = 2;
