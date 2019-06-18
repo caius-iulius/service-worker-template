@@ -3,9 +3,14 @@
   "name": "Service Worker Test",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "type": "image/ico",
-      "sizes": "32x32"
+      "src": "/assets/images/icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/",
