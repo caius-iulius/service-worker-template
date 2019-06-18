@@ -4,7 +4,9 @@ var urlsToPrefetch = [
         '/app.js',
         '/assets/js/sidenav.js',
         '/assets/placeholderpage.html',
-        '/favicon.ico',
+        '/assets/images/favicon.ico',
+        '/assets/images/icon192.png',
+        '/assets/images/icon512.png',
         '/manifest.json'
 ];
 
