@@ -10,7 +10,7 @@ var urlsToPrefetch = [
         '/manifest.json'
 ];
 
-var CACHE_VERSION = 2;
+var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
